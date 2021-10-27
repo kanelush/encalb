@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@5.8.55/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+    <link rel="shortcut icon" href="{% static 'content/logo.png' %}"/>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <script src="{% static 'js/index.js' %}"></script>
+     
+<body>
+    <nav class="navbar is-fixed-top is-spaced" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="{% url 'base' %}">
+            <img src="{% static 'content/logo.png' %}" width="90" height="50">
+          </a>
+      
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+      
+        <div id="navbarBasicExample" class="navbar-menu">
+          
+      
+          <div class="navbar-end">
+            <a class="navbar-item">
+                Inicio
+              </a>
+              <a class="navbar-item">
+                Nosotros
+              </a>
+              <a class="navbar-item">
+                Contacto
+              </a>
+          </div>
+        </div>
+        
+      </nav>
+      <br>
+      <br>
+      
+      
+    {% block content %}
+    {% endblock %}
+    <br>
+    <hr>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script>
+	function myFunction() {
+	 alert("Mensaje Enviado");
+	}
+    </script>
+    
+   
+</body>
+</html>
